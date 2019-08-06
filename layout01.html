@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>layout-布局</title>
+	<script src="easyui/jquery.min.js"></script>
+	<script src="easyui/jquery.easyui.min.js"></script>
+	<script src="easyui/locale/easyui-lang-zh_CN.js"></script>
+	<script type="text/javascript" src="js/layout.js"></script>
+	<link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
+</head>
+<body>
+<!-- class="easyui-layout"-->
+
+<div id="box"  style="width:600px;height:400px;">
+   <div data-options="
+	   region:'north',
+	   title:'上北',
+	   border:true,
+	   split:true,
+	   iconCls:'icon-save',
+	   href:'content.html',
+	   collapsible:false,
+	   maxHeight:100,
+   " style="height:200px;"></div>
+   <div data-options="region:'south',title:'下南', split:true," style="height:100px;"></div>
+   <div data-options="region:'west',title:'左西', split:true," style="width:100px;"></div>
+   <div data-options="region:'east',title:'右东', split:true," style="width:100px;"></div>
+   <div data-options="region:'center',title:'中间'"></div>
+</div>
+
+
+</body>
+</html>

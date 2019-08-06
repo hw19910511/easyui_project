@@ -1,0 +1,12 @@
+$(function(){
+	$('#edit').splitbutton({
+		plain:false,
+		iconCls:'icon-edit',
+		menu:'#box',
+		duration:500,
+	});
+	console.log($('#edit').splitbutton('options'));
+	$('#edit').splitbutton('disable');
+	$('#edit').splitbutton('enable');
+	//$('#edit').splitbutton('destroy');
+});

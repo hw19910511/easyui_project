@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>form- 表单</title>
+	<script type="text/javascript" src="easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>	
+	<script type="text/javascript" src="easyui/locale/easyui-lang-zh_CN.js"></script>
+	<script type="text/javascript" src="js/form.js"></script>
+	<link rel="stylesheet" href="easyui/themes/default/easyui.css" />
+	<link rel="stylesheet" href="easyui/themes/icon.css" />
+</head>
+<body>
+<form id="box" method="post" action="123.html">
+   <p>账号：<input type="text" name="name" class="easyui-validatebox" data-options="required:true"/></p>
+   <p>邮件：<input type="text" name="email" class="easyui-validatebox" data-options="validType:'email',required:true"/></p>
+   <input type="submit"/>
+</form>
+</body>
+</html>

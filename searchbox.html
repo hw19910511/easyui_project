@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>searchbox- 搜索框</title>
+	<script type="text/javascript" src="easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>	
+	<script type="text/javascript" src="easyui/locale/easyui-lang-zh_CN.js"></script>
+	<script type="text/javascript" src="js/searchbox.js"></script>
+	<link rel="stylesheet" href="easyui/themes/default/easyui.css" />
+	<link rel="stylesheet" href="easyui/themes/icon.css" />
+     <script type="text/javascript"> 
+	   function qq(name,value){
+	     alert(name+'-'+value);
+	   }
+	 </script>
+</head>
+<body>
+<!--
+<div class="easyui-searchbox" style="width:300px;" data-options="menu:'#box',prompt:'请输入关键字',searcher:qq"></div>
+-->
+
+<div id="ss"></div>
+<div id="box"> 
+   <div data-options="iconCls:'icon-ok'">所有频道</div>
+   <div name="sports" data-options="iconCls:'icon-filter'">体育频道</div>
+   <div name="children" data-options="iconCls:'icon-man'">少儿频道</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>tabs02-选项卡</title>
+	<script src="easyui/jquery.min.js"></script>
+	<script src="easyui/jquery.easyui.min.js"></script>
+	<script src="easyui/locale/easyui-lang-zh_CN.js"></script>
+	<script type="text/javascript" src="js/tabs02.js"></script>
+	<link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
+</head>
+<body>
+<!-- <div id="box" class="easyui-tabs" style="width:500px;height:300px;">
+   <div title="tab1">tab1</div>
+   <div title="tab2">tab2</div>
+   <div title="tab3">tab3</div>
+</div> -->
+<div id="box"  style="width:500px;height:300px;">
+   <div title="tab1">tab1</div>
+   <div title="tab2" id="tab2" data-options="closable:true">tab2</div>
+   <div title="tab3">tab3</div>
+</div>
+
+<div id="tt">
+	<a class="icon-add" onclick="javascript:alert('add')">&nbsp;&nbsp;</a>
+	<a class="icon-edit" onclick="javascript:alert('edit')">&nbsp;&nbsp;</a>
+	<a class="icon-cut" onclick="javascript:alert('cut')">&nbsp;&nbsp;</a>
+</div>
+</body>
+</html>

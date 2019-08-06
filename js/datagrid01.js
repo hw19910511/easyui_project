@@ -1,0 +1,32 @@
+$(function(){
+	$('#box').datagrid({
+		width:500,
+		//url:'datagrid.json',
+		//url:'datagrid.php',
+		url:'user.php',
+		title:'用户列表',
+		iconCls:'icon-search',
+		columns:[[//DataGrid列配置对象
+		   {
+			   field:'user',//列字段名称
+			   title:'账号',//列标题名称
+			   width:100,//列宽度
+		   },
+		   {
+			   field:'email',
+			   title:'邮件',
+			    width:200,
+		   },
+		   {
+			   field:'date',
+			   title:'注册时间',
+			    width:198,
+		   },
+		]],
+		pagination:true,//分页组件底部是否显示分页工具栏
+		pageSize:5,//设置分页时设置每页多少条
+		pageList:[5,10,15,20],//设置分页时初始化条数选择大小
+		pageNumber:1,//设置分页时初始化页码
+		pagePosition:'bottom',//设置分页工具栏的位置
+	});
+});

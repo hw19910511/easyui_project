@@ -1,0 +1,23 @@
+$(function(){
+	$("#box").spinner({
+		required:true,
+		/*
+		//width:300,
+		//height:40,
+		value:2,
+		min:1,
+		max:500,
+		increment:1,//在点击微调按钮的时候的增量值
+		//editable:false,//定义用户是否可以直接输入值到字段
+		spin:function(down){
+			alert(down);
+		},
+		*/
+		onSpinUp:function(){
+			$("#box").spinner('setValue',parseInt($('#box').spinner('getValue'))+1);
+		},
+		onSpinDown:function(){
+			$("#box").spinner('setValue',parseInt($('#box').spinner('getValue'))-1);
+		},
+	});
+});

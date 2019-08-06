@@ -1,0 +1,46 @@
+$(function(){
+	$('#box').datagrid({
+		width:500,
+		//url:'datagrid.json',
+		//url:'datagrid.php',
+		url:'user.php',
+		title:'用户列表',
+		iconCls:'icon-search',
+		columns:[[//DataGrid列配置对象
+		   {
+			   field:'user',//列字段名称
+			   title:'账号',//列标题名称
+			   width:100,//列宽度
+			   sortable:true,
+		   },
+		   {
+			   field:'email',
+			   title:'邮件',
+			    width:200,
+				sortable:true,
+				/* sorter:function(a,b){
+					console.log(a+'|'+b);
+				}, */
+		   },
+		   {
+			   field:'date',
+			   title:'注册时间',
+			    width:198,
+				sortable:true,//可点击排序
+		   },
+		]],
+		pagination:true,//分页组件底部是否显示分页工具栏
+		pageSize:10,//设置分页时设置每页多少条
+		pageList:[10,20,30],//设置分页时初始化条数选择大小
+		pageNumber:1,//设置分页时初始化页码
+		pagePosition:'bottom',//设置分页工具栏的位置
+		sortName:'date',//设置哪些列可以进行排序
+		sortOrder:'DESC',//设置列排序的顺序
+		remoteSort:false,//设置服务器对数据进行排序
+	    //multiSort:true,//设置是否运行多列排序
+		//method:'get',//设置请求远程数据类型
+		queryParams:{
+			id:1,
+		},//设置请求远程数据发送的额外数据
+	});
+});

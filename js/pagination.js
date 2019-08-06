@@ -1,0 +1,44 @@
+$(function(){
+	$("#box").pagination({
+		total:5,//总条数
+		pageSize:1,//每页显示的条数
+		pageNumber:1,//目前页数
+		pageList:[1,2],//页面导航展示的页码
+		//loading:true,//定义数据是否正在载入
+		buttons:[{//自定义按钮
+			iconCls:'icon-add',
+		},'-',{
+			iconCls:'icon-edit',
+		}],
+		//layout:['first','prev','links','next','last','refresh'],//分页控件布局定义
+		showPageList:true,//定义是否显示页面导航列表
+		showRefresh:true,//定义是否显示刷新按钮
+		beforePageText:'第',//在输入组件之前显示一个label标签
+		afterPageText:'共{pages}条',//在输入组件之后显示一个label标签
+		displayMsg:'显示{from}到{to},共{total}记录',//显示页面信息
+		onSelectPage:function(pageNumber,pageSize){//用户选择一个新页面的时候触发
+			$("#box").pagination('loading');//提醒分页控件正在加载中
+			$("#content").panel('refresh','user.php?page='+pageNumber+'&pagesize='+pageSize);
+		    setTimeout(function(){
+				$("#box").pagination('loaded');//提醒分页控件加载完成
+			},1000);			
+		},
+		onBeforeRefresh:function(pageNumber,pageSize){
+			alert('刷新之前');
+		},//在点击刷新按钮刷新之前触发，返回false可以取消刷新动作
+		onRefresh:function(pageNumber,pageSize){
+			alert('刷新之后');
+		},//刷新之后触发
+		onChangePageSize:function(pageSize){
+			alert('每页显示的条数被改变!');
+		},//在页面更改页面大小的时候触发。
+	});
+	
+	$(document).click(function(){
+		/* $("#box").pagination('refresh',{
+			pageSize:2,
+			pageNumber:2,
+		}); */
+		$("#box").pagination('select',2);//选择一个新页面，索引从1开始
+	});
+});

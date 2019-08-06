@@ -1,0 +1,20 @@
+<?php 
+   sleep(3);
+?>
+[
+   {
+     "user":"蜡笔小新",
+	 "email":"xiaoxin@163.com",
+	 "date":"2014-10-1"
+   },
+   {
+     "user":"樱桃小丸子",
+	 "email":"xiaowanzi@163.com",
+	 "date":"2014-10-2"
+   },
+   {
+     "user":"山田一户",
+	 "email":"yihu@163.com",
+	 "date":"2014-10-3"
+   }
+]

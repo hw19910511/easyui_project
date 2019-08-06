@@ -1,0 +1,54 @@
+$(function(){
+	$(document).on('contextmenu',function(e){//contextmenu--右击事件
+		e.preventDefault();//阻止默认事件
+		$('#box').menu('show',{
+			left:e.pageX,
+			top:e.pageY,
+		});
+	});
+	//hideOnUnhover:false-鼠标离开菜单显示
+	
+	/*隐藏菜单
+	$(document).on('contextmenu',function(e){//contextmenu--右击事件
+		e.preventDefault();//阻止默认事件
+		$('#box').menu('hide');
+	});
+	*/
+	console.log($("#box").menu('options'));
+	//$("#box").menu('destroy');//销毁
+	console.log($("#box").menu('getItem','#new').id);
+	$("#box").menu('getItem','#new');
+	$("#box").menu('setText',{
+		target:'#new',
+		text:'新型',
+	});
+	$("#box").menu('setIcon',{
+		target:'#new',
+		iconCls:'icon-add',
+	});
+	//console.log($("#box").menu('findItem','退出'));
+	$("#box").menu('appendItem',{
+		id:'rename',
+		text:'重命名',
+		iconCls:'icon-edit',
+		//href:'www.163.html',
+		onclick:function(){
+			console.log($('#box').menu('findItem','重命名'))
+		}
+	});
+	//$("#box").menu('removeItem','#new');//移除
+	$("#box").menu('disableItem','#new');//禁用
+	$("#box").menu('enableItem','#new');//起用
+	
+	$("#box").menu({
+		/* onShow:function(){
+			alert('显示时触发！');
+		},
+		onHide:function(){
+			alert('隐藏时触发！');
+		}, */
+		onClick:function(item){
+			alert(item.text);
+		}
+	});
+});
